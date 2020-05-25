@@ -1,14 +1,15 @@
+import Identity from "lodash/identity";
+import PropTypes from "prop-types";
 import React from "react";
 
 import "../../App.css";
-import PropTypes from "prop-types";
-import Identity from "lodash/identity";
 
 class ListItem extends React.Component {
   showDesc = (index, showDesc) => {
     return () => showDesc(index);
   };
 
+  // for returning  categories items list
   showListItems(listItemNo, listItems, showDesc) {
     let list = listItems.map((listItem, index) => {
       const listStyle =
@@ -26,6 +27,7 @@ class ListItem extends React.Component {
     return list;
   }
 
+  // to return description of list item on select list item
   showDescPart(listItemNo, listItems) {
     return listItemNo !== null ? (
       <div className="desc">{listItems[listItemNo].description}</div>
@@ -36,8 +38,8 @@ class ListItem extends React.Component {
     const { listItemNo, listItems, showDesc } = this.props;
     const listStyle = { listStyleType: "none" };
     return (
-      <div className="bottomPart">
-        <div className="listItem">
+      <div className="bottom-part">
+        <div className="list-item">
           <ul style={listStyle}>
             {this.showListItems(listItemNo, listItems, showDesc)}
           </ul>

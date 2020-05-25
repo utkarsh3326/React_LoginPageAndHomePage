@@ -1,11 +1,13 @@
+import Identity from "lodash/identity";
+import PropTypes from "prop-types";
 import React from "react";
 
-import "../../App.css";
-import { Data } from "../../utility/Data";
 import HomePageHeader from "./HomePageHeader";
-import Identity from "lodash/identity";
 import ListItem from "./ListItem";
-import PropTypes from "prop-types";
+
+import { Data } from "../../utility/Data";
+
+import "../../App.css";
 
 class HomePage extends React.Component {
   constructor() {
@@ -19,6 +21,7 @@ class HomePage extends React.Component {
     this.showList = this.showList.bind(this);
   }
 
+  // for enabling and disabling clear selection button and containing list index for showing it
   showList(index) {
     if (index === null) {
       this.setState({ clearSelectionState: true });
@@ -29,10 +32,12 @@ class HomePage extends React.Component {
     this.setState({ listItemNo: null });
   }
 
+  // for containing list item index on onClick
   showDesc(index) {
     this.setState({ listItemNo: index });
   }
 
+  // to return list on select any categories
   showListItem(listItemNo, listNo) {
     return listNo != null ? (
       <ListItem
@@ -47,11 +52,11 @@ class HomePage extends React.Component {
     const { clearSelectionState, listItemNo, listNo } = this.state;
     return (
       <div>
-        <button className="logOut" onClick={this.props.jumpToHomePage}>
+        <button className="logout" onClick={this.props.jumpToHomePage}>
           Log Out
         </button>
         <button
-          className="clearSelection"
+          className="clear-selection"
           style={
             clearSelectionState
               ? { backgroundColor: "lightseagreen" }

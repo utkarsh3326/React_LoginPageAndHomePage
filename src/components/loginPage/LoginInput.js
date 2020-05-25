@@ -1,8 +1,8 @@
+import Identity from "lodash/identity";
+import PropTypes from "prop-types";
 import React from "react";
 
 import "../../App.css";
-import PropTypes from "prop-types";
-import Identity from "lodash/identity";
 
 class Input extends React.Component {
   render() {

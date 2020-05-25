@@ -1,8 +1,9 @@
 import React from "react";
 
-import "./App.css";
 import HomePage from "./components/homePage/HomePage";
 import LoginPage from "./components/loginPage/LoginPage";
+
+import "./App.css";
 
 class App extends React.Component {
   constructor(props) {

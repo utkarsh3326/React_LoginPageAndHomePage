@@ -1,10 +1,12 @@
+import Identity from "lodash/identity";
+import PropTypes from "prop-types";
 import React from "react";
 
-import "../../App.css";
-import Identity from "lodash/identity";
 import Input from "./LoginInput";
+
 import { InputData, UserData } from "../../utility/Data";
-import PropTypes from "prop-types";
+
+import "../../App.css";
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -19,6 +21,7 @@ class LoginPage extends React.Component {
     this.submitHandler = this.submitHandler.bind(this);
   }
 
+  // for enabling and disabling login button
   buttonStateHandler() {
     if (
       this.state.email !== "" &&
@@ -34,6 +37,7 @@ class LoginPage extends React.Component {
     }
   }
 
+  // for updating state of email and password
   async changeHandler(e) {
     let key = e.target.name;
     let value = e.target.value;
@@ -44,6 +48,7 @@ class LoginPage extends React.Component {
     await this.buttonStateHandler();
   }
 
+  // for checking credentials and jump to home page
   submitHandler(e) {
     e.preventDefault();
     if (
@@ -56,6 +61,7 @@ class LoginPage extends React.Component {
     }
   }
 
+  // for returning login input field
   loginInputField() {
     let inputFieldData = InputData.map((input) => {
       return (
@@ -77,18 +83,18 @@ class LoginPage extends React.Component {
     const buttonStyle = !buttonState ? { backgroundColor: "green" } : null;
 
     return (
-      <div className="loginPage">
-        <form className="loginForm" onSubmit={this.submitHandler}>
+      <div className="login-page">
+        <form className="login-form" onSubmit={this.submitHandler}>
           {this.loginInputField()}
           <input
-            className="loginFormButton"
+            className="login-form-button"
             disabled={buttonState}
             style={buttonStyle}
             type="submit"
             value="Login"
           />
         </form>
-        <p className="errorMessage">{errorMessage}</p>
+        <p className="error-message">{errorMessage}</p>
       </div>
     );
   }

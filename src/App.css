@@ -3,51 +3,51 @@
   background-color: rgb(49, 49, 75);
   height: 800px;
 }
-.loginPage {
+.login-page {
   width: 100%;
   padding-top: 180px;
 }
-.loginForm {
+.login-form {
   text-align: center;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
 }
-.loginFormInput1 {
+.login-form-input1 {
   width: 40%;
   height: 35px;
 }
-.loginFormInput2 {
-  width: 40%;
-  height: 35px;
-  margin-top: 70px;
-}
-.loginFormButton {
+.login-form-input2 {
   width: 40%;
   height: 35px;
   margin-top: 70px;
 }
-.homePageHeader {
+.login-form-button {
+  width: 40%;
+  height: 35px;
+  margin-top: 70px;
+}
+.home-page-header {
   padding: 60px 0px 0px 60px;
   display: flex;
 }
-.homePageHeader div {
+.home-page-header div {
   width: 30%;
   background-color: yellow;
   margin-right: 20px;
   height: 200px;
 }
-.listItem {
+.list-item {
   width: 31%;
   padding: 40px 0px 0px 20px;
 }
-.listItem li {
+.list-item li {
   background-color: green;
   height: 100px;
   margin-bottom: 20px;
 }
-.bottomPart {
+.bottom-part {
   display: flex;
 }
 .desc {
@@ -56,7 +56,7 @@
   background-color: darksalmon;
   margin: 50px 0px 0px 40px;
 }
-.logOut {
+.logout {
   position: absolute;
   right: 20px;
   top: 10px;
@@ -67,11 +67,11 @@
   font-size: medium;
   font-weight: bold;
 }
-.errorMessage {
+.error-message {
   color: red;
   font-size: 30px;
 }
-.clearSelection {
+.clear-selection {
   position: absolute;
   right: 120px;
   top: 10px;

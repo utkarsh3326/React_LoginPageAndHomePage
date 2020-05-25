@@ -65,13 +65,13 @@ export const Data = {
 
 export const InputData = [
   {
-    className: "loginFormInput1",
+    className: "login-form-input1",
     type: "text",
     name: "email",
     placeholder: "Email",
   },
   {
-    className: "loginFormInput2",
+    className: "login-form-input2",
     type: "text",
     name: "password",
     placeholder: "Password",

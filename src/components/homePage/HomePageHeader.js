@@ -1,14 +1,15 @@
+import Identity from "lodash/identity";
+import PropTypes from "prop-types";
 import React from "react";
 
 import "../../App.css";
-import PropTypes from "prop-types";
-import Identity from "lodash/identity";
 
 class HomePageHeader extends React.Component {
   showList = (index, showList) => {
     return () => showList(index);
   };
 
+  // to return categories
   showHeaderPart(categories, listNo, showList) {
     return categories.map((item, index) => {
       const style =
@@ -30,7 +31,7 @@ class HomePageHeader extends React.Component {
   render() {
     const { categories, listNo, showList } = this.props;
     return (
-      <div className="homePageHeader">
+      <div className="home-page-header">
         {this.showHeaderPart(categories, listNo, showList)}
       </div>
     );
