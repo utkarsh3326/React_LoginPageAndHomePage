@@ -1,38 +1,84 @@
 .App {
   text-align: center;
+  background-color: rgb(49, 49, 75);
+  height: 800px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loginPage {
+  width: 100%;
+  padding-top: 180px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loginForm {
+  text-align: center;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.loginFormInput1 {
+  width: 40%;
+  height: 35px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginFormInput2 {
+  width: 40%;
+  height: 35px;
+  margin-top: 70px;
+}
+.loginFormButton {
+  width: 40%;
+  height: 35px;
+  margin-top: 70px;
+}
+.homePageHeader {
+  padding: 60px 0px 0px 60px;
+  display: flex;
+}
+.homePageHeader div {
+  width: 30%;
+  background-color: yellow;
+  margin-right: 20px;
+  height: 200px;
+}
+.listItem {
+  width: 31%;
+  padding: 40px 0px 0px 20px;
+}
+.listItem li {
+  background-color: green;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.bottomPart {
+  display: flex;
+}
+.desc {
+  width: 57%;
+  height: 340px;
+  background-color: darksalmon;
+  margin: 50px 0px 0px 40px;
+}
+.logOut {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: lightseagreen;
+  border: 0px;
+  height: 30px;
+  width: 80px;
+  font-size: medium;
+  font-weight: bold;
+}
+.errorMessage {
+  color: red;
+  font-size: 30px;
+}
+.clearSelection {
+  position: absolute;
+  right: 120px;
+  top: 10px;
+  background-color: lightseagreen;
+  border: 0px;
+  height: 30px;
+  width: 120px;
+  font-size: small;
+  font-weight: bold;
 }
